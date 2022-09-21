@@ -145,9 +145,7 @@ function shapeStroke(target, colour, weight) {
   target.stroke();
 }
 
-function shapeFill(target, colour, order) {
-  if (order === undefined) order = "nonzero";
-
+function shapeFill(target, colour, order = "nonzero") {
   target.fillStyle = colour;
   target.fill(order);
 

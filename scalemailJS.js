@@ -11,6 +11,8 @@
 // Assets
 let imageAssets = new imageLoader();
 let imagePath = "images/";
+let c = "";
+
 
 // Canvases
 let backgroundLayer = new entityLayer();
@@ -66,12 +68,10 @@ rulerData['metric'] = { unitSize: "mm", multiSize: 1, unitWeight: "g", multiWeig
 rulerData['imperial'] = { unitSize: "\"", multiSize: 0.0393701, unitWeight: "oz", multiWeight: 0.035274 };
 
 // Scale Variables
-let scaleRadius = 75;
-let scaleInnerHoleOffset = 0;
-let scaleInnerHoleRadius = 0;
+let scaleRadius = 35;
 
 let scaleOffsetX, scaleOffsetY, scaleOffsetR, scaleHeightPx, scaleHeightPxHalf, scaleHeightPxQuarter,
-  scaleWidthPx, scaleWidthPxHalf, scaleSpacingX, scaleSpacingXHalf, scaleSpacingY = 0;
+  scaleWidthPx, scaleWidthPxHalf, scaleSpacingX, scaleSpacingXHalf, scaleSpacingY, scaleInnerHoleRadius, scaleInnerHoleOffset = 0;
 
 let scaleRatioWide = 0.609022556;
 let scaleRatioHigh = 1.641975309;
@@ -99,6 +99,7 @@ init();
 
 function init() {
   setupElements();
+
   imageAssets.loadImages();
   addEvent(window, "resize", scaleCanvases);
 }
@@ -1574,7 +1575,7 @@ function savePattern() {
     error = true;
   }
 
-  if (saveAuthor == "" || saveAuthor == null || saveAuthor == undefined || saveAuthor.length > 60 || checkRestricted(saveAuthor, true) === true || checkCharacters(saveAuthor)) {
+  if (saveAuthor == "" || saveAuthor == null || saveAuthor == undefined || saveAuthor.length > 60 || checkRestricted(saveAuthor) === true || checkCharacters(saveAuthor)) {
     errorList.push(["oAuthor", "Please enter an author name, that is less than 60 characters long, and only contains letters, numbers, spaces, underscores, and hyphens."]);
     error = true;
   }
@@ -1913,12 +1914,7 @@ function imageRow() {
   }
 }
 
-function imagePixel(r, g, b, a, p) {
-  if (r === undefined) r = 0;
-  if (g === undefined) g = 0;
-  if (b === undefined) b = 0;
-  if (a === undefined) a = 0;
-  if (p === undefined) p = 0;
+function imagePixel(r = 0, g = 0, b = 0, a = 0, p = 0) {
 
   this.r = r;
   this.g = g;
@@ -2051,6 +2047,8 @@ function itpImageProcess() {
   // Insert Image for Processing
   itpMemContext.drawImage(itpImage, 0, 0);
   itpProcessData = itpMemContext.getImageData(0, 0, imageWidth, imageHeight);
+  console.log('processData');
+  console.log(itpProcessData);
 
   itpImageData.clearData();
   itpProcessRow = 0;
@@ -2296,7 +2294,7 @@ function zoomExtents(sourcePattern, targetCanvas) {
 }
 
 function zoomReset() {
-  scaleRadius = 75;
+  scaleRadius = 35;
   zoomCanvas(0);
 }
 
@@ -2815,9 +2813,7 @@ function setOverlay(windowID) {
   }
 }
 
-function makeOverlayPane(pane, type) {
-  if (type === undefined) type = true;
-
+function makeOverlayPane(pane, type = true) {
   let content = "";
   let objects = 0;
   let brick = false;
@@ -2827,14 +2823,14 @@ function makeOverlayPane(pane, type) {
   let xHover = "";
   let tmp = "";
 
-  let c = "";
+  c = "";
   let x = 0;
   let y = 0;
   let z = 0;
   let n = 0;
 
   // Open Pane
-  if (type === true) {
+  if (type) {
     content = "<div class='overlayPane'>";
     content += "<div id='htmlArea'>";
     y = 1;
@@ -2849,24 +2845,26 @@ function makeOverlayPane(pane, type) {
   for (x = 0; x < objects; x++) {
     // Mouse Events
     if (pane.objects[x].click !== false) {
-      xClick = "onclick=\"" + pane.objects[x].click + "\" ";
+      xClick = 'onclick="' + pane.objects[x].click + '"';
     } else {
       xClick = "";
     }
 
     if (pane.objects[x].hover !== false) {
-      xChange = "onhover=\"" + pane.objects[x].hover + "\" ";
+      xChange = 'onhover="' + pane.objects[x].hover + '"';
     } else {
       xChange = "";
     }
 
     if (pane.objects[x].change !== false) {
-      xHover = "onchange=\"" + pane.objects[x].change + "\" ";
+      xHover = 'onchange="' + pane.objects[x].change + '"';
     } else {
       xHover = "";
     }
 
     // Write HTML
+    console.log('radioClicked');
+
     switch (pane.objects[x].type) {
       case "anchor":
         content += "<a href='" + pane.objects[x].url + "' target='" + pane.objects[x].target + "'>"
@@ -2896,7 +2894,7 @@ function makeOverlayPane(pane, type) {
         break;
 
       case "button":
-        content += "<div class='overlayButton' " + xClick + xChange + xHover + "\">";
+        content += "<div class='overlayButton' " + xClick + xChange + xHover + ">";
         content += "<img src='" + imagePath + pane.objects[x].src + ".png' alt='" + pane.objects[x].alt + "' />";
         content += "<p>" + pane.objects[x].title + "</p>";
         content += "</div>";
@@ -2971,7 +2969,6 @@ function makeOverlayPane(pane, type) {
           c = "hidden";
         } else {
           tmp = pane.objects[x].label;
-          c = "";
         }
 
         tmp = "<label for='" + pane.objects[x].id + "'>" + tmp + "</label>";
@@ -3068,14 +3065,13 @@ function makeOverlayPane(pane, type) {
         break;
 
       case "text":
-        let c = 0;
         let l = pane.objects[x].string.length;
 
         if (pane.objects[x].title != "") {
           content += "<h2>" + pane.objects[x].title + "</h2>";
         }
 
-        for (c = 0; c < l; c++) {
+        for (let c = 0; c < l; c++) {
           content += "<p>" + pane.objects[x].string[c] + "</p>";
         }
 
@@ -3326,9 +3322,7 @@ function buildOverlays() {
   nObject.type = "text";
 
   nObject.title = "How to Use";
-  nObject.string[0] = "Use these options to generate a new scalemail pattern from a basic shape.";
-  nObject.string[1] = "Select the desired shape from the options provided, then set the height, width, and colour as desired.";
-  nObject.string[2] = "Note that some shapes, such as the diamond, require a fixed height/width ratio that will be calculated automatically.";
+  nObject.string = ["Use these options to generate a new scalemail pattern from a basic shape.", "Select the desired shape from the options provided, then set the height, width, and colour as desired.", "Note that some shapes, such as the diamond, require a fixed height/width ratio that will be calculated automatically."];
 
   nWindow.addObjectToPane(nObject);
 
@@ -5201,9 +5195,7 @@ function setActiveColour(colour) {
 }
 
 // Pattern Functions ==================================================================================================
-function newPattern(target, width = 5, height = 9, patternShape = 0, colour = activeColour) {
-
-  let x = 0;
+function newPattern(target, width = 76, height = 38, patternShape = 0, colour = activeColour) {
 
   target.clearMatrix();
 
@@ -5221,11 +5213,11 @@ function newPattern(target, width = 5, height = 9, patternShape = 0, colour = ac
   }
 
   // Generate Blank Matrix
-  for (x = 0; x < height; x++) {
+  for (let x = 0; x < height; x++) {
     target.addRow();
   }
 
-  for (x = 0; x < width; x++) {
+  for (let x = 0; x < width; x++) {
     target.addColumn(1);
   }
 
@@ -5236,7 +5228,8 @@ function newPattern(target, width = 5, height = 9, patternShape = 0, colour = ac
     case 1:
       patternShapeDiamond(target, colour);
       break;
-
+    case 2:
+      patternShoulderShawl(target, colour);
     default:
       patternShapeSquare(target, colour);
       break;
@@ -5260,16 +5253,12 @@ function newFromShape() {
   overlay.hideOverlay();
 }
 
-function patternShapeSquare(target, colour) {
-  if (colour === undefined) colour = activeColour;
+function patternShapeSquare(target, colour = activeColour) {
 
   let height = target.height;
   let width = target.width;
 
-  let x = 0;
-  let y = 0;
-
-  for (y = 0; y < height; y++) {
+  for (let y = 0; y < height; y++) {
     // Set Inset Scale
 
     if (y % 2 == 1) {
@@ -5279,7 +5268,7 @@ function patternShapeSquare(target, colour) {
     }
 
     // Set Square
-    for (x = 1; x < width; x++) {
+    for (let x = 1; x < width; x++) {
       target.matrix[y][x].colour = colour;
     }
   }
@@ -5287,23 +5276,20 @@ function patternShapeSquare(target, colour) {
   target.getSize();
 }
 
-function patternShapeDiamond(target, colour) {
-  if (colour === undefined) colour = activeColour;
+function patternShapeDiamond(target, colour = activeColour) {
 
   let height = target.height;
   let width = target.width;
   let breakHeight = 0;
   let breakWidth = 0;
 
-  let x = 0;
-  let y = 0;
   let z = 0;
   let s = 0;
 
   breakHeight = Math.floor(height / 2);
   breakWidth = Math.floor(width / 2);
 
-  for (y = 0; y < height; y++) {
+  for (let y = 0; y < height; y++) {
     // Set Inset Scale
     if (width % 2 == 0) {
       // Even Set Inset Scale
@@ -5350,12 +5336,21 @@ function patternShapeDiamond(target, colour) {
     }
 
     // Set Diamond
-    for (x = 0; x < z; x++) {
+    for (let x = 0; x < z; x++) {
       target.matrix[y][(breakWidth - s) + x].colour = colour;
     }
   }
 
   target.getSize();
+}
+
+function patternShoulderShawl(target, colour) {
+  let height = 38;
+  let width = 76;
+  let breakHeight = Math.floor(height / 2);
+  let breakWidth = Math.floor(width / 2);
+
+
 }
 
 // Scale Functions ====================================================================================================
@@ -5399,8 +5394,7 @@ function sendRequest(target, request, responseFunction) {
   ajaxRequest.send(request);
 }
 
-function updateScaleVariables(radius) {
-  if (radius === undefined) radius = 75;
+function updateScaleVariables(radius = 35) {
 
   // Scale Base
   scaleRadius = radius;
@@ -5476,7 +5470,7 @@ function startDesigner() {
   buildPalette();
 
   // Pattern
-  newPattern(editorPattern, 5, 9, 1);
+  newPattern(editorPattern, 72, 38, 1);
 
   // Templates
   splashText.innerHTML = "Generating swatches...";
@@ -5975,7 +5969,7 @@ function createPalette(target) {
   let y = palette.colours.length;
 
   let r = 0;
-  let c = 0;
+  c = 0;
 
   let strokeWeight = 4;
   let strokeColour = themeLibrary.themes[theme].paletteColour;

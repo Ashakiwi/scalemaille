@@ -1,13 +1,10 @@
-const restrictedAuthors = [
-  "raven", "lotr"
-];
-
 const allowedCharacters = new RegExp("^[a-z0-9 _-]+$");
 const fontStyles = ["bold 12px Montserrat", "12px Montserrat", "bold 18px Montserrat", "18px Montserrat"];
 
+const encoded = '92b2d4c1c4msh1de35bf2aa66991p1aa7eajsna9bd146f7191'
 
 // Validations =======================================================================================================
-async function checkRestricted(string, extended = false) {
+async function checkRestricted(string) {
   string = string.toLowerCase();
 
   const encodedParams = new URLSearchParams();
@@ -17,7 +14,7 @@ async function checkRestricted(string, extended = false) {
     method: 'POST',
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
-      'X-RapidAPI-Key': '92b2d4c1c4msh1de35bf2aa66991p1aa7eajsna9bd146f7191',
+      'X-RapidAPI-Key': encoded,
       'X-RapidAPI-Host': 'neutrinoapi-bad-word-filter.p.rapidapi.com'
     },
     body: encodedParams
@@ -32,15 +29,6 @@ async function checkRestricted(string, extended = false) {
   if (restrictedResult['is-bad']) {
     console.log("Couldn't you use a nicer word than that?");
     return true;
-  }
-
-  if (extended === true) {
-    for (x = 0; x < restrictedAuthors.length; x++) {
-      if (string.includes(restrictedAuthors[x])) {
-        console.log("Couldn't you use a nicer word than that?");
-        return true;
-      }
-    }
   }
 
   return false;
@@ -182,23 +170,19 @@ function distanceFromScale(fromX, fromY, toX, toY, offsetX, offsetY) {
   }
 }
 
-function formatRGBA(r, g, b, a) {
-  if (a === undefined) a = 1;
-
+function formatRGBA(r, g, b, a = 1) {
   return "rgba(" + r + "," + g + "," + b + "," + a + ")";
 }
 
-function setURL(id, title) {
-  if (id === undefined) id = "";
-  if (title === undefined) title = "";
-
+function setURL(id = "", title = "") {
   if (id != "") {
     id = "?id=" + id;
   } else {
     id = "https://scalemail.lairoftheraven.uk";
   }
 
-  window.history.pushState(browserHistory, title, id);
+  //disabled for local
+  // window.history.pushState(browserHistory, title, id);
 }
 
 // Background Functions ===============================================================================================
