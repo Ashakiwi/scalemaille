@@ -16,7 +16,7 @@
     "hex": "rgba(16, 24, 32, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 
 {
@@ -26,7 +26,7 @@
     "hex": "rgba(244, 245, 240, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_firered",
@@ -35,7 +35,7 @@
     "hex": "rgba(208, 28, 31, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_bldorng",
@@ -44,7 +44,7 @@
     "hex": "rgba(251, 139, 35, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_turq",
@@ -53,7 +53,7 @@
     "hex": "rgba(0, 163, 224, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_ameviolet",
@@ -62,7 +62,7 @@
     "hex": "rgba(117, 59, 189, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_creamsicle",
@@ -71,7 +71,7 @@
     "hex": "rgba(252, 76, 2, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_gldyel",
@@ -80,7 +80,7 @@
     "hex": "rgba(255, 215, 0, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_emerald",
@@ -89,7 +89,7 @@
     "hex": "rgba(0, 115, 54, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_sapphire",
@@ -98,7 +98,7 @@
     "hex": "rgba(0, 35, 156, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_mint",
@@ -107,7 +107,7 @@
     "hex": "rgba(13, 176, 43, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_royalpur",
@@ -116,7 +116,7 @@
     "hex": "rgba(78, 0, 142, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_cottoncandy",
@@ -125,7 +125,7 @@
     "hex": "rgba(255, 169, 214, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 {
     "id": "dw_chocobrn",
@@ -134,6 +134,6 @@
     "hex": "rgba(98, 59, 42, 1)",
 	"material": "aluminum", 
 	"finish": "shiny", 
-	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+	"sizes": ["small", "large", "x-large"],
   }
 
