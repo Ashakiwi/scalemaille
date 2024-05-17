@@ -1,0 +1,139 @@
+/* {
+    "id": "",
+    "name": "",
+	"vendor": "",
+    "hex": "",
+	"material": "aluminum", (aluminum, steel, titanium, plastic)
+	"finish": "", (brushed, shiny, mirror, diamond, matte)
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+*/
+
+{
+    "id": "dw_shadblk",
+    "name": "DW-Shadowy Black",
+	"vendor": "DraconicWares",
+    "hex": "rgba(16, 24, 32, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+
+{
+    "id": "dw_snowwhite",
+    "name": "DW-Snowy White",
+	"vendor": "DraconicWares",
+    "hex": "rgba(244, 245, 240, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_firered",
+    "name": "DW-Fiery Red",
+	"vendor": "DraconicWares",
+    "hex": "rgba(208, 28, 31, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_bldorng",
+    "name": "DW-Blood Orange",
+	"vendor": "DraconicWares",
+    "hex": "rgba(251, 139, 35, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_turq",
+    "name": "DW-Turquoise Blue",
+	"vendor": "DraconicWares",
+    "hex": "rgba(0, 163, 224, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_ameviolet",
+    "name": "DW-Amethyst Violet",
+	"vendor": "DraconicWares",
+    "hex": "rgba(117, 59, 189, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_creamsicle",
+    "name": "DW-Creamsicle Orange",
+	"vendor": "DraconicWares",
+    "hex": "rgba(252, 76, 2, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_gldyel",
+    "name": "DW-Golden Yellow",
+	"vendor": "DraconicWares",
+    "hex": "rgba(255, 215, 0, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_emerald",
+    "name": "DW-Emerald Green",
+	"vendor": "DraconicWares",
+    "hex": "rgba(0, 115, 54, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_sapphire",
+    "name": "DW-Sapphire Blue",
+	"vendor": "DraconicWares",
+    "hex": "rgba(0, 35, 156, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_mint",
+    "name": "DW-Mint Green",
+	"vendor": "DraconicWares",
+    "hex": "rgba(13, 176, 43, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_royalpur",
+    "name": "DW-Royal Purple",
+	"vendor": "DraconicWares",
+    "hex": "rgba(78, 0, 142, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_cottoncandy",
+    "name": "DW-Cotton Candy Pink",
+	"vendor": "DraconicWares",
+    "hex": "rgba(255, 169, 214, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+{
+    "id": "dw_chocobrn",
+    "name": "DW-Chocolate Brown",
+	"vendor": "DraconicWares",
+    "hex": "rgba(98, 59, 42, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+
