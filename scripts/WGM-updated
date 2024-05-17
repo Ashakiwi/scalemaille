@@ -1,0 +1,251 @@
+/* {
+    "id": "",
+    "name": "",
+	"vendor": "",
+    "hex": "",
+	"material": "aluminum", (aluminum, steel, titanium, plastic)
+	"finish": "", (brushed, shiny, mirror, diamond, matte)
+	"sizes": ["petite", "tiny", "small", "medium", "large", "x-large"],
+  }
+*/
+
+{
+    "id": "wgm_lime",
+    "name": "WGM-Lime",
+	"vendor": "WGM",
+    "hex": "rgba(164,231,142, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_lapis",
+    "name": "WGM-Lapis",
+	"vendor": "WGM",
+    "hex": "rgba(0, 159, 197, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_bubblegum",
+    "name": "WGM-Bubblegum",
+	"vendor": "WGM",
+    "hex": "rgba(240, 69, 166, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_violet",
+    "name": "WGM-Violet",
+	"vendor": "WGM",
+    "hex": "rgba(161, 55, 144, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_maui",
+    "name": "WGM-Maui Blue",
+	"vendor": "WGM",
+    "hex": "rgba(0, 198, 215, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_gunmetal",
+    "name": "WGM-Gunmetal",
+	"vendor": "WGM",
+    "hex": "rgba(156, 164, 176, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_paprika",
+    "name": "WGM-Paprika",
+	"vendor": "WGM",
+    "hex": "rgba(242, 131, 55, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_canary",
+    "name": "WGM-Canary",
+	"vendor": "WGM",
+    "hex": "rgba(241, 201, 68, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_mauve",
+    "name": "WGM-Mauve",
+	"vendor": "WGM",
+    "hex": "rgba(196, 109, 137, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_golden",
+    "name": "WGM-Golden",
+	"vendor": "WGM",
+    "hex": "rgba(234, 197, 146, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_myrtle",
+    "name": "WGM-Myrtle Green",
+	"vendor": "WGM",
+    "hex": "rgba(53, 153, 132, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "gm_marsala",
+    "name": "WGM-Marsala",
+	"vendor": "WGM",
+    "hex": "rgba(185, 59, 64, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_henna",
+    "name": "WGM-Henna",
+	"vendor": "WGM",
+    "hex": "rgba(124, 71, 66, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_marmalade",
+    "name": "WGM-Marmalade",
+	"vendor": "WGM",
+    "hex": "rgba(230, 161, 108, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_platinum",
+    "name": "WGM-Platinum",
+	"vendor": "WGM",
+    "hex": "rgba(218, 214, 211, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_candyapple",
+    "name": "WGM-Candy Apple",
+	"vendor": "WGM",
+    "hex": "rgba(225, 66, 64, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_luckypenny",
+    "name": "WGM-Lucky Penny",
+	"vendor": "WGM",
+    "hex": "rgba(200, 118, 85, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_pumpkin",
+    "name": "WGM-Pumpkin",
+	"vendor": "WGM",
+    "hex": "rgba(248, 136, 7, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_shamrock",
+    "name": "WGM-Shamrock",
+	"vendor": "WGM",
+    "hex": "rgba(56, 141, 84, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_sourapple",
+    "name": "WGM-Sour Apple",
+	"vendor": "WGM",
+    "hex": "rgba(176, 186, 78, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_cobalt",
+    "name": "WGM-Cobalt",
+	"vendor": "WGM",
+    "hex": "rgba(15, 91, 163, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_lilac",
+    "name": "WGM-Lilac",
+	"vendor": "WGM",
+    "hex": "rgba(112, 93, 191, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_turq",
+    "name": "WGM-Turquoise",
+	"vendor": "WGM",
+    "hex": "rgba(0, 180, 218, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
+{
+    "id": "wgm_onyx",
+    "name": "WGM-Onyx",
+	"vendor": "WGM",
+    "hex": "rgba(62, 61, 64, 1)",
+	"material": "aluminum", 
+	"finish": "shiny", 
+	"sizes": ["small", "large"],
+  }
+
